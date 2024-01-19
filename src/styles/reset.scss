@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Manrope:wght@400;500;600&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  overflow-x: hidden;
+  background: $primary;
+  color: $light;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input, button {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    border: none;
+    background: none;
+    outline: none;
+    color: $light;
+    font-size: 16px;
+}
+
+a {
+  color: $light;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+width: 1200px;
+margin: 0 auto;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+}
+
+// прибираємо стрілки для інпутів
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+h2 {
+  color: $light;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button-more {
+  color: $light;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}

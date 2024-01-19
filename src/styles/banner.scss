@@ -1,0 +1,16 @@
+.banner {
+  min-height: 540px;
+  position: relative;
+  background-image: url(../images/main-bg.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &-video {
+      position: relative;
+    // position: absolute; в неї relative, хоча сказала absolute. ролі не грає не те, не те
+
+    @include center;
+    top: 30%;
+  }
+}
