@@ -25,4 +25,13 @@ export const sortByDate = (arr) => {
 
 };
 
+export const getLocaleDateString = (
+  date,
+  { month = "numeric", day = "numeric", year = "numeric" }
+) =>
+  new Date(date).toLocaleDateString("en-EN",
+    { month, day, year }
+);
+
+
 

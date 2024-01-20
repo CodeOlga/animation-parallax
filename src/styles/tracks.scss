@@ -1,0 +1,70 @@
+.tracks {
+  padding: 16px 0;
+  margin-top: 20px;
+
+  &-section {
+    padding: 50px 0;
+  }
+}
+
+.track {
+  cursor: pointer;
+  text-transform: uppercase;
+  width: max-content;
+  display: grid;
+  gap: 16px;
+  position: relative;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: 
+  "image date"
+  "title .";
+
+  &-item {
+    &:nth-child(2n) {
+      .track {
+        margin-left: auto;
+        grid-template-columns: 1fr 300px;
+  grid-template-areas: 
+  "date image"
+  ". title";
+      }
+    }
+  }
+
+  &-image {
+    grid-area: image;
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+    img {
+      object-fit: cover;
+    }
+
+    .icon {
+      &-pause {
+        width: 100px;
+        height: 100px;
+        fill: $light;
+        @include center;
+      }
+    }
+  }
+
+  &-date {
+    color: $grey;
+    font-size: 14px;
+    grid-area: date;
+  }
+
+  &-title {
+    color: $light;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 125%;
+    position: absolute;
+    grid-area: title;
+    top: 100%;
+    z-index: 2;
+  }
+}
