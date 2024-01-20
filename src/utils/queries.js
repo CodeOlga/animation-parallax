@@ -17,4 +17,23 @@ export const tourItemCollectionQuery = `
   }
 `;
 
-// (id: "Oz1DkCqxWe7wKWRVVCurt")
+export const trackItemCollectionQuery = `
+  {
+    trackCollection {
+      items {
+        sys {
+          id
+        }
+        date
+        title
+        link {
+          url
+        }
+        cover {
+          url
+        }
+      }
+    }
+  }
+`;
+

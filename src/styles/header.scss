@@ -36,16 +36,17 @@ header {
   column-gap: 16px;
 
   &-item {
+
     a {
       color: $light;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: color 0.25s ease;
-&:hover {
-        color: $action;
-    }
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
 
-    }
+        &:hover {
+          color: $action;
+        }
+      }
   }
 }

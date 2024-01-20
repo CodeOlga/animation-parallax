@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
-import Section from "../Section/Section";
 import SectionTitle from "../Title/SectionTitle";
+import Section from "../Section/Section";
 import TourItem from "./TourItem";
 
 import { getTourItems } from "../../reducers/tourReducer";
-import { Link } from "react-router-dom";
+
+import { sortByDate } from "../../utils/common";
 
 const TourItems = () => {
   const dispatch = useDispatch();
@@ -17,10 +19,17 @@ const TourItems = () => {
     dispatch(getTourItems())
   }, [dispatch]);
 
-  // робимо filtered для фільтрації, тоді на 31 рядку filtered мапимо замість items
+  // робимо filtered для фільтрації елементів, що отримуємо, тоді на 31 рядку filtered мапимо замість items
   // const filtered = items
   //   .filter(({ soldOut, ticketLink }) => !soldOut && ticketLink)
   //   .filter((_, i) => i < 5)
+
+  // sortByDate - сортуємо за датою
+  const filtered = sortByDate(
+    items
+      .filter(({ soldOut }) => !soldOut)
+      .filter((_, i) => i < 5)
+  );
 
   return (
     <Section className="tour">
@@ -28,7 +37,7 @@ const TourItems = () => {
         <SectionTitle text='Concerts' />
         {isLoading ? "LOADING" : (
           <ul className="tour-list">
-            {items.map((item, i) => (
+            {filtered.map((item, i) => (
               <TourItem {...item} i={i} key={item.sys.id} />
             ))}
           </ul>

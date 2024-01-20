@@ -1,20 +1,20 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import { request } from "../utils/common";
-import { tourItemCollectionQuery } from "../utils/queries";
+import { trackItemCollectionQuery } from "../utils/queries";
 
 const initialState = {
   items: [],
   isLoading: false,
 };
 
-export const getTourItems = createAsyncThunk(
-  'tourItems/getTourItems',
+export const getTracksItems = createAsyncThunk(
+  'tracksItems/getTracksItems',
   async (_, thunkAPI) => {
     try {
-      const data = await request(tourItemCollectionQuery);
+      const data = await request(trackItemCollectionQuery);
 
-      const { items } = data.tourItemCollection;
+      const { items } = data.trackCollection;
 
       return items; 
 
@@ -24,26 +24,26 @@ export const getTourItems = createAsyncThunk(
 
 })
 
-const tourItemsSlice = createSlice({
-  name: 'tourItems',
+const tracksItemsSlice = createSlice({
+  name: 'tracksItems',
   initialState,
 
   extraReducers: (builder) => {
     builder
-      .addCase(getTourItems.pending, (state) => {
+      .addCase(getTracksItems.pending, (state) => {
       state.isLoading = true;
       })
-      .addCase(getTourItems.fulfilled, (state, {payload}) => {
+      .addCase(getTracksItems.fulfilled, (state, {payload}) => {
         state.isLoading = false;
         state.items = payload;
       })
-      .addCase(getTourItems.rejected, (state) => {
+      .addCase(getTracksItems.rejected, (state) => {
         state.isLoading = false;
       })
   }
 });
 
-export default tourItemsSlice.reducer;
+export default tracksItemsSlice.reducer;
 
 
 

@@ -10,3 +10,32 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin button () {
+  padding: 12px 14px 12px 16px;
+  background: $light;
+  color: $primary;
+  min-width: 224px;
+
+  @include flex;
+
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background .25s;
+
+  span {
+    text-transform: uppercase;
+    font-style: 14px;
+    font-weight: 500;
+  }
+
+  svg {
+    width: 18px;
+    height: 16px;
+    fill: $primary;
+  }
+
+  &:hover {
+    background: $action;
+  }
+}

@@ -98,4 +98,11 @@ h2 {
   display: block;
   margin: 0 auto;
   text-align: center;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: color .25s;
+
+  &:hover {
+    color: $action;
+  }
 }
