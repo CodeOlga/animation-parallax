@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Link } from "react-router-dom";
 
 import { getTracksItems } from "../../reducers/tracksReducer";
 import { getLocaleDateString } from "../../utils/common";
@@ -65,6 +66,10 @@ const Tracks = () => {
             })}
           </div>
         )}
+
+        <Link to="/tracks" className="button-more">
+          All tracks
+        </Link>
       </div>
     </Section>
   )

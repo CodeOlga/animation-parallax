@@ -22,7 +22,7 @@ export const MENU = [
 ];
 
 export const SOCIALS = [
-    {
+  {
     icon: "youtube",
     link: "https://www.youtube.com/channel/UCCzp3DWpSc0s5wXYDghjM9A",
   },
@@ -46,4 +46,9 @@ export const SOCIALS = [
     icon: "spotify",
     link: "https://open.spotify.com/artist/1gCOYbJNUa1LBVO5rlx0jB",
   },
-]
+];
+
+export const SLIDER_BUTTON_TYPES = {
+  NEXT: "NEXT",
+  PREV: "PREV",
+}
