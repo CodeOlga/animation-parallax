@@ -106,3 +106,24 @@ h2 {
     color: $action;
   }
 }
+
+.loader {
+  min-height: 20vh;
+  width: 100%;
+  position: relative;
+  @include flex;
+
+  img {
+    max-width: 50px;
+    animation: beat 0.75s linear infinite;
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}

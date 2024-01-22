@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import SectionTitle from "../Title/SectionTitle";
 import Section from "../Section/Section";
 import TourItem from "./TourItem";
+import Loader from "../Loader/Loader";
 
 import { getTourItems } from "../../reducers/tourReducer";
 
@@ -35,7 +36,9 @@ const TourItems = () => {
     <Section className="tour">
       <div className="container">
         <SectionTitle text='Concerts' />
-        {isLoading ? "LOADING" : (
+        {isLoading ? (
+          <Loader />
+        ) : (
           <ul className="tour-list">
             {filtered.map((item, i) => (
               <TourItem {...item} i={i} key={item.sys.id} />

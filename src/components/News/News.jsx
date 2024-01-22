@@ -11,6 +11,7 @@ import { SLIDER_BUTTON_TYPES } from "../../utils/constants";
 import Section from "../Section/Section";
 import SectionTitle from "../Title/SectionTitle";
 import Icon from "../Icon/Icon";
+import Loader from "../Loader/Loader";
 
 import "swiper/css";
 
@@ -38,7 +39,9 @@ const News = () => {
     <Section className="news-section">
       <div className="container">
         <SectionTitle text="News" />
-        {isLoading ? "LOADING..." : (
+        {isLoading ? (
+          <Loader />
+        ) : (
           <Swiper
             className="news"
             ref={sliderRef}
