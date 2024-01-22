@@ -26,6 +26,7 @@ export const trackItemCollectionQuery = `
         }
         date
         title
+        description
         link {
           url
         }

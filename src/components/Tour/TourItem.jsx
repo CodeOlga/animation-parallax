@@ -9,10 +9,10 @@ const TourItem = ({
   place,
   city,
   soldOut,
-  country,
   ticketLink,
   videoLink,
   i,
+  offset = 260
 }) => {
   return (
     <li>
@@ -21,7 +21,7 @@ const TourItem = ({
         animateIn="fadeInLeft"
         animateOut="fadeOutRight"
         delay={i * 100}
-        offset={260}
+        offset={offset}
       >
         <div className="tour-item__info">
           <div className="tour-item__date">

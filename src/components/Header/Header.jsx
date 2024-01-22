@@ -1,5 +1,5 @@
 import ScrollAnimation from "react-animate-on-scroll";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import Logo from "../Logo/Logo";
 import Socials from "../Socials/Socials";
@@ -20,7 +20,12 @@ const Header = () => (
               delay={i * 100}
               offset={0}
             >
-              <Link to={`/${link}`}>{name}</Link>
+              <NavLink
+                className={({ isActive }) => (isActive ? "active" : "")}
+                to={`/${link}`}
+              >
+                {name}
+              </NavLink>
             </ScrollAnimation>
           )}
         </nav>

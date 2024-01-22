@@ -9,7 +9,7 @@ export const MENU = [
   },
   {
     name: "Creations",
-    link: "#tracks"
+    link: "tracks"
   },
   {
     name: "News",

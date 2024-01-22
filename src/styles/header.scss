@@ -36,7 +36,6 @@ header {
   column-gap: 16px;
 
   &-item {
-
     a {
       color: $light;
       font-size: 12px;
@@ -44,7 +43,8 @@ header {
       text-transform: uppercase;
       transition: color 0.25s ease;
 
-        &:hover {
+        &:hover,
+        &.active {
           color: $action;
         }
       }

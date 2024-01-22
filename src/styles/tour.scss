@@ -1,6 +1,60 @@
 .tour {
   padding: 20px 0;
 
+  &-page {
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      background: url(../images/tour-bg.webp) no-repeat center/cover;
+      width: 100vw;
+      min-width: 1920px;
+      height: 100vh;
+      min-height: 945px;
+      top: -70px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: -1;
+    }
+  }
+
+  &-tabs {
+    @include flex;
+    justify-content: flex-start;
+    margin: 30px 0;
+    column-gap: 16px;
+    position: relative;
+  }
+
+  &-tab {
+    color: $grey;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      position: absolute;
+      background: $action;
+      bottom: -4px;
+      transition: width .25s;
+    }
+
+    &.active {
+      color: $light;
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
   &-list {
     margin-top: 20px;
   }
@@ -46,6 +100,11 @@
 
     &__button {
       @include button;
+
+      &.soldout {
+        background: $not-allowed;
+        cursor: not-allowed;
+      }
     }
   }
 }

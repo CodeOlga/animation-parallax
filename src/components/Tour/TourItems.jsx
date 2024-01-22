@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import SectionTitle from "../Title/SectionTitle";
@@ -7,18 +5,12 @@ import Section from "../Section/Section";
 import TourItem from "./TourItem";
 import Loader from "../Loader/Loader";
 
-import { getTourItems } from "../../reducers/tourReducer";
-
 import { sortByDate } from "../../utils/common";
 
+import { useTourItems } from "../../hooks/useTourItems";
+
 const TourItems = () => {
-  const dispatch = useDispatch();
-
-  const { items = [], isLoading } = useSelector(({ tour }) => tour);
-
-  useEffect(() => {
-    dispatch(getTourItems())
-  }, [dispatch]);
+  const { items = [], isLoading } = useTourItems();
 
   // робимо filtered для фільтрації елементів, що отримуємо, тоді на 31 рядку filtered мапимо замість items
   // const filtered = items
