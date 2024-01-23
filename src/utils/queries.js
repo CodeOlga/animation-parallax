@@ -54,3 +54,21 @@ export const newsItemCollectionQuery = `
     }
   }
 `;
+
+export const newsItemQuery = (id) => `
+  {
+    newsItem(id: "${id}") {
+      sys {
+        id
+      }
+      date
+      title
+      cover {
+        url
+      }
+      description {
+        json
+      }
+    }
+  }
+`;

@@ -6,6 +6,99 @@
     padding: 64px 0;
   }
 
+  &-single {
+    &__item {
+      &-title {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      &-date {
+        color: $grey;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      &-content {
+        margin-top: 24px;
+        color: $light;
+        font-size: 14px;
+        line-height: 120%;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        a {
+          color: $action;
+          text-decoration: underline;
+
+          &:hover {
+            color: lighten($action, 20%);
+          }
+        }
+
+        p {
+          margin: 12px 0;
+        }
+
+        img {
+          margin: 16px 0;
+          display: block;
+        }
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-top: 20px;
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: 24px;
+
+      &-img {
+        min-width: 300px;
+        height: 168px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-date {
+        color: $grey;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      &-title {
+        color: $light;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 16px;
+        line-height: 150%;
+      }
+
+      &-button {
+        @include button;
+
+        width: max-content;
+        margin-top: auto;
+      }
+    }
+  }
+
   &-item {
     &__img {
       width: 100%;

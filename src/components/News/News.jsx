@@ -1,12 +1,12 @@
-import { useCallback, useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useCallback, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Link } from "react-router-dom";
 
-import { getNewsItems } from "../../reducers/newsReducer";
 import { SLIDER_BUTTON_TYPES } from "../../utils/constants";
+
+import { useNewsItems } from "../../hooks/useNewsItems";
 
 import Section from "../Section/Section";
 import SectionTitle from "../Title/SectionTitle";
@@ -19,13 +19,8 @@ const News = () => {
   const { PREV, NEXT } = SLIDER_BUTTON_TYPES;
 
   const sliderRef = useRef();
-  const dispatch = useDispatch();
 
-  const { items = [], isLoading } = useSelector(({ news }) => news);
-
-  useEffect(() => {
-    dispatch(getNewsItems())
-  }, [dispatch])
+  const { items = [], isLoading } = useNewsItems();
 
   const handleButtonClick = useCallback((type) => {
     if (!sliderRef.current) return;
