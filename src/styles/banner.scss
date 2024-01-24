@@ -11,14 +11,18 @@
   }
 
   &-video {
-      position: relative;
-    // position: absolute; в неї relative, хоча сказала absolute. ролі не грає не те, не те
+    position: relative;
+    // position: absolute; // в неї relative, хоча сказала absolute. ролі не грає не те, не те
 
     @include center;
     top: 30%;
 
     @media only screen and (max-width: 1366px) {
       width: 500px;
+    }
+
+    @media only screen and (max-width: 750px) {
+      width: 300px;
     }
   }
 }
