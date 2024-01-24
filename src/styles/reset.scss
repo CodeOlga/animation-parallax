@@ -60,8 +60,13 @@ ul, li {
 }
 
 .container {
-width: 1200px;
-margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 1366px) {
+    width: calc(100vw - 30px);
+    padding: 0 15px;
+  }
 }
 
 .icon {
@@ -87,6 +92,10 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media only screen and (max-width: 1366px) {
+    font-size: 18px;
+  }
 }
 
 .button-more {
@@ -105,6 +114,11 @@ h2 {
   &:hover {
     color: $action;
   }
+
+  @media only screen and (max-width: 1366px) {
+    font-size: 12px;
+    margin-top: 25px;
+  }
 }
 
 .loader {
@@ -121,12 +135,21 @@ h2 {
 
 .page {
   padding: 40px 0;
+
   &-title {
     color: $light;
     font-size: 60px;
     font-weight: 900;
     text-transform: uppercase;
     line-height: 125%;
+
+    @media only screen and (max-width: 1366px) {
+      font-size: 40px;
+    }
+
+    @media only screen and (max-width: 750px) {
+      font-size: 24px;
+    }
   }
 }
 

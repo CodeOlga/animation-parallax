@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import Logo from "../Logo/Logo";
 import Socials from "../Socials/Socials";
+import Hamburger from "./Hamburger";
 
 import { MENU } from "../../utils/constants";
 
@@ -21,7 +22,9 @@ const Header = () => (
               offset={0}
             >
               <NavLink
-                className={({ isActive }) => (isActive ? "active" : "")}
+                className={({ isActive }) =>
+                  !link.startsWith("#") && isActive ? "active" : ""
+                }
                 to={`/${link}`}
               >
                 {name}
@@ -30,10 +33,10 @@ const Header = () => (
           )}
         </nav>
         <Socials />
+        <Hamburger />
       </header>
-
     </div>
   </section>
-)
+);
 
 export default Header;

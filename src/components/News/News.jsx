@@ -44,6 +44,17 @@ const News = () => {
             slidesPerView={4}
             navigation
             modules={[Navigation]}
+            breakpoints={{
+              1366: {
+                slidesPerView: 4,
+              },
+              720: {
+                slidesPerView: 3,
+              },
+              360: {
+                slidesPerView: 2,
+              },
+            }}
           >
             {items.map(({ title, sys: { id }, cover: { url } }, i) => (
               <SwiperSlide key={id}>
