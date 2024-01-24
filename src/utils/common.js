@@ -72,7 +72,7 @@ export const jsonToText = ({ content }) => {
   return content.map(renderNode)
 };
 
-// для отримання новини 
+// для отримання картинки
 
 export const getAsset = async (assetId) => {
   try { 
@@ -81,10 +81,16 @@ export const getAsset = async (assetId) => {
     const result = await fetch(url);
     const data = await result.json();
 
+    // console.log(data)
+    
     const link = data?.fields?.file?.url;
+
+    // console.log(link)
+
     return link ? `https:${link}` : null;
 
   } catch (err) {
     console.log(err)
   }
 };
+

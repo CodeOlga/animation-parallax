@@ -7,6 +7,7 @@ import { getNewsItem } from "../../reducers/newsReducer";
 import { getLocaleDateString, jsonToText } from "../../utils/common";
 
 import Loader from "../Loader/Loader";
+// import Asset from "../Assets/Asset";
 
 const NewsSingle = () => {
   const dispatch = useDispatch();
@@ -19,8 +20,9 @@ const NewsSingle = () => {
   }, [dispatch, id])
 
   console.log(item);
+
   return (
-    <section className="news-single page">
+    <section className="page news-single">
       <div className="container">
         {isLoading || !item ? (
           <Loader />
@@ -35,6 +37,7 @@ const NewsSingle = () => {
             <div className="news-single__item-content">
               {jsonToText(item.description.json)}
             </div>
+            {/* <Asset id={item.cover?.sys?.id} /> */}
           </div>
         )}
       </div>

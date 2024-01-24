@@ -25,11 +25,13 @@ export const getNewsItems = createAsyncThunk(
   }
 );
 
-  export const getNewsItem = createAsyncThunk(
+export const getNewsItem = createAsyncThunk(
   'newsItems/getNewsItem',
   async (id, thunkAPI) => {
     try {
       const data = await request(newsItemQuery(id));
+
+      console.log(data)
 
       return data.newsItem;
 
@@ -48,7 +50,7 @@ const newsItemsSlice = createSlice({
       .addCase(getNewsItems.pending, (state) => {
       state.isLoading = true;
       })
-      .addCase(getNewsItems.fulfilled, (state, { payload }) => {
+      .addCase(getNewsItems.fulfilled, (state, { payload}) => {
         state.isLoading = false;
         state.items = payload;
       })

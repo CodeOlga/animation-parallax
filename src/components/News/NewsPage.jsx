@@ -10,7 +10,7 @@ import Icon from "../Icon/Icon";
 
 const NewsPage = () => {
   const { items, isLoading } = useNewsItems();
-
+  console.log(items)
   return (
     <section className="news-page page">
       <div className="container">
@@ -45,6 +45,6 @@ const NewsPage = () => {
       </div>
     </section>
   )
-}
+};
 
 export default NewsPage;
