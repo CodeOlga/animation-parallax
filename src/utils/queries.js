@@ -72,3 +72,20 @@ export const newsItemQuery = (id) => `
     }
   }
 `;
+
+export const shopItemCollectionQuery = `
+  {
+    shopItemCollection {
+      items {
+        sys {
+          id
+        }
+        price
+        title
+        image {
+          url
+        }
+      }
+    }
+  }
+`;

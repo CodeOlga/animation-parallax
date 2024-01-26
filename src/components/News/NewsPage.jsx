@@ -41,7 +41,6 @@ const NewsPage = () => {
             })}
           </div>
         )}
-
       </div>
     </section>
   )
