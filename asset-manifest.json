@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/animation-parallax/static/css/main.4fb24b2f.css",
+    "main.js": "/animation-parallax/static/js/main.cba326ea.js",
+    "static/media/oxxxytour.mp4": "/animation-parallax/static/media/oxxxytour.47d83b0b3f0704e7fb3d.mp4",
+    "static/media/text.webm": "/animation-parallax/static/media/text.d628dc5d558acb60b7b0.webm",
+    "static/media/banner-glow.webp": "/animation-parallax/static/media/banner-glow.7313b7c0dba063e963bf.webp",
+    "static/media/effect.webp": "/animation-parallax/static/media/effect.641f0311714514773a3a.webp",
+    "static/media/banner.webp": "/animation-parallax/static/media/banner.3a1c7177f2f763f3052f.webp",
+    "static/media/main-bg.webp": "/animation-parallax/static/media/main-bg.99ad9f780d1dcee7870e.webp",
+    "static/media/tour-bg.webp": "/animation-parallax/static/media/tour-bg.ca5289ce5d9a26515b33.webp",
+    "static/media/loader.webp": "/animation-parallax/static/media/loader.e2614750c642228d9b45.webp",
+    "static/media/oxxxyshop.webp": "/animation-parallax/static/media/oxxxyshop.decced1f65f3f4a9b2cb.webp",
+    "static/media/logo.webp": "/animation-parallax/static/media/logo.ba0c8b6a290f1c9b93dc.webp",
+    "index.html": "/animation-parallax/index.html",
+    "main.4fb24b2f.css.map": "/animation-parallax/static/css/main.4fb24b2f.css.map",
+    "main.cba326ea.js.map": "/animation-parallax/static/js/main.cba326ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fb24b2f.css",
+    "static/js/main.cba326ea.js"
+  ]
+}
